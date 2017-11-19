@@ -21,6 +21,14 @@ class Checkout
 	public $voidStatus;
 	public $metadata;
 
+	public $paymentScheme;
+	public $expressCheckout;
+	public $refundedAmount;
+	public $canPayPal;
+	public $createdAt;
+	public $updatedAt;
+	public $expiredAt;
+
 	private $apiManager;
 
 	public function __construct()
@@ -45,13 +53,20 @@ class Checkout
 		$response = $this->apiManager->retrieveCheckout($this->id);
 		$responseArr = json_decode($response, true);
 
-		$this->status = $responseArr["status"];
-		$this->paymentType = $responseArr["paymentType"];
-		$this->transactionReferenceNumber = $responseArr["transactionReferenceNumber"];
-		$this->receiptNumber = $responseArr["receiptNumber"];
-		$this->paymentStatus = $responseArr["paymentStatus"];
-		$this->voidStatus = $responseArr["voidStatus"];
-		$this->metadata = $responseArr["metadata"];
+        $this->status = $responseArr["status"];
+//		$this->paymentType = $responseArr["paymentType"];
+        $this->transactionReferenceNumber = $responseArr["transactionReferenceNumber"];
+        $this->receiptNumber = $responseArr["receiptNumber"];
+        $this->paymentStatus = $responseArr["paymentStatus"];
+//		$this->voidStatus = $responseArr["voidStatus"];
+//		$this->metadata = $responseArr["metadata"];
+        $this->paymentScheme = $responseArr["paymentScheme"];
+        $this->expressCheckout = $responseArr["expressCheckout"];
+        $this->refundedAmount = $responseArr["refundedAmount"];
+        $this->createdAt = $responseArr["createdAt"];
+        $this->updatedAt = $responseArr["updatedAt"];
+        $this->expiredAt = $responseArr["expiredAt"];
+        $this->canPayPal = $responseArr["canPayPal"];
 
 		return $response;
 	}
