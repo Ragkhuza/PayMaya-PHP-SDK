@@ -13,27 +13,25 @@ class User
 
     public function __construct()
     {
-        //sample format
+        /*        $this->firstName = "John";
+                $this->middleName = "Michaels";
+                $this->lastName = "Doe";
 
-/*        $this->firstName = "John";
-        $this->middleName = "Michaels";
-        $this->lastName = "Doe";
+                // Contact
+                $this->contact = new Contact();
+                $this->contact->phone = "+63(2)1234567890";
+                $this->contact->email = "paymayabuyer1@gmail.com";
 
-        // Contact
-        $this->contact = new Contact();
-        $this->contact->phone = "+63(2)1234567890";
-        $this->contact->email = "paymayabuyer1@gmail.com";
-
-        // Address
-        $address = new Address();
-        $address->line1 = "9F Robinsons Cybergate 3";
-        $address->line2 = "Pioneer Street";
-        $address->city = "Mandaluyong City";
-        $address->state = "Metro Manila";
-        $address->zipCode = "12345";
-        $address->countryCode = "PH";
-        $this->shippingAddress = $address;
-        $this->billingAddress = $address;*/
+                // Address
+                $address = new Address();
+                $address->line1 = "9F Robinsons Cybergate 3";
+                $address->line2 = "Pioneer Street";
+                $address->city = "Mandaluyong City";
+                $address->state = "Metro Manila";
+                $address->zipCode = "12345";
+                $address->countryCode = "PH";
+                $this->shippingAddress = $address;
+                $this->billingAddress = $address;*/
     }
 
     public function buyerInfo()
